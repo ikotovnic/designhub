@@ -3,10 +3,10 @@
 
     <div class="firstscr">
       <div class="title">
-        <p>provide the developers in a short time</p>
+        <p>If you are a designer and you are looking for projects to work with, then we will help you in the search</p>
       </div>
       <div class="img">
-        <img src="../assets/g1.svg">
+        <img src="../assets/m2.svg">
       </div>
     </div>
 
@@ -50,41 +50,9 @@
       </div>
     </div>
 
-    <div class="directions">
-      <div class="row">
-        <div class="el blue"><p>Interface design</p></div>
-        <div class="el red"><p>Ui/Ux</p></div>
-        <div class="el green"><p>Motion design</p></div>
-      </div>
-      <div class="row">
-        <div class="el gray"><p>Interaction design</p></div>
-        <div class="el yel"><p>Web design</p></div>
-      </div>
-      <div class="row">
-        <div class="el red"><p>Graphic design</p></div>
-        <div class="el purp"><p>Java-script</p></div>
-        <div class="el blue"><p>Html/css</p></div>
-        <div class="el gray"><p>3d-web</p></div>
-      </div>
-      <div class="row">
-        <div class="el yel"><p>Branding</p></div>
-        <div class="el green"><p>Illustrations</p></div>
-      </div>
-    </div>
 
-    <div class="projects">
-      <div class="title"><p>Projects of the designer we work with</p></div>
-      <div class="list">
-        <div class="row">
-          <div class="el"><p>element</p></div>
-          <div class="el"><p>element2</p></div>
-        </div>
-        <div class="row">
-          <div class="el"><p>element3</p></div>
-          <div class="el"><p>element4</p></div>
-        </div>
-      </div>      
-    </div>
+
+
 
   </div>
 </template>
