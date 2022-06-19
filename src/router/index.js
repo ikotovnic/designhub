@@ -18,13 +18,17 @@ const routes = [
 ]
 
 const router = createRouter({
-  scrollBehavior() {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({ x: 0, y: 0 })
-      }, 500)
-    })
-  },
+  scrollBehavior: function (to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    if (to.hash) {
+      return { el: to.hash, behavior: "smooth" }
+    } else {
+
+      setTimeout(() => window.scrollTo(0, 0), 500)
+    }
+ },
   history: createWebHashHistory(),
   routes
 })

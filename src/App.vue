@@ -1,26 +1,37 @@
 <template>
   <div>
+    <div class="mobile-logo"><img src="./assets/logo.svg"></div>
     <div class="header">
-      <router-link to="/">
-        <div class="logo"> <img src="./assets/logo.svg"></div>
-      </router-link>
-      <div class="nav">
-        <router-link to="/ForDesigners">
-          <p>for designers</p>
-        </router-link>
+
         <router-link to="/">
-          <p>for employers</p>
+          <div class="logo"> <img src="./assets/logo.svg"></div>
         </router-link>
-        <p>contact</p>
-      </div>
+
+        <div class="nav">
+
+              <router-link to="/">
+               <span>for employers</span>
+              </router-link>
+
+              <router-link to="/ForDesigners">
+                <span>for designers</span>
+              </router-link>
+              <router-link to="/contact">
+                <span>contact</span>
+              </router-link>
+        </div>
     </div>
 
-    <transition name='router-anim'>
-      <router-view />
-    </transition>
+<router-view v-slot="{ Component }">
+  <transition name="scale">
+    <component :is="Component" />
+  </transition>
+</router-view>
 
   </div>
 </template>
+
+
 
 <style>
   :root {
@@ -33,9 +44,10 @@ body{
   padding: 0px;
   margin: 0px;
 }
-a{
-  text-decoration: none;
+.mobile-logo{
+  display: none;
 }
+
 .header{
   display: flex;
   flex-direction: row;
@@ -43,63 +55,101 @@ a{
   top: 0;
   left: 0;
   height: 70px;
-  background: white;
+  background-color: rgba(255, 255, 255, 1);
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
 }
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .header{
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .header .logo{
   padding-left: 20px;
 }
 .header .nav{
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 10px;
   justify-content: space-between;
   padding-right: 20px;
+  padding: 0px 10px 0px 10px;
+  height: 40px;
 }
-.header .nav p{
+
+.header .nav a{
+  color: #1b1b1b;
+  transition: all 1s;
+  padding: 0px 10px 0px 10px;
+  border-radius: 10px;
   font-family: 'Roboto Flex';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #1B1B1B;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.router-anim-enter-active{
-  animation: coming 1.5s;
-  animation-delay: 0s;
+.scale-enter-active{
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
+}
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
   opacity: 0;
-  transform: scale(0.9);
-}
-.router-anim-leave-active{
-  animation: going 0.5s;
-
+  transform: scale(0.95);
 }
 
-@keyframes going {
-  from {
-    transform: scale(1);
-  }
-  to{
-    opacity: 0;
-    transform: scale(0.9);
-  }
+.nav a.router-link-exact-active{
+  color: #1b1b1b;
+  background-color: #ff5151;
+  padding: 0px 10px 0px 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes coming {
-  from {
-    opacity: 0;
-    transform: scale(0.7);
+@media screen and (max-width: 600px){
+  .mobile-logo{
+    display: unset;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 10px 0px 0px 10px;
+    height: unset;
+    z-index: 99;
   }
-  to{
-    transform: translateX(0px);
-    opacity: 1;
-    transform: scale(1);
+  .mobile-logo img{
+    width: 100px;
   }
+  .header{
+    top: unset;
+    bottom: 0;
+    height: 50px;
+
+  }
+  .header .logo{
+    display: none;
+  }
+
+  .header .nav{
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+  }
+
 }
-
-
-
 </style>

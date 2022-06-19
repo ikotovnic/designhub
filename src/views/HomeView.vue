@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
 
     <div class="firstscr">
       <div class="title">
@@ -92,6 +92,9 @@
 
 </script>
 <style scoped>
+  .wrap{
+    background-color: #fff;
+  }
   p{
     font-family: 'Roboto Flex';
     font-style: normal;
@@ -105,12 +108,12 @@
   }
 
   .firstscr{
-    widows: 100%;
     display: flex;
     flex-direction: row;
-    padding: 100px 60px 30px;
+    padding: 100px 60px 0px 30px;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
   .firstscr .title{
     max-width: 60%;
@@ -243,10 +246,17 @@
   .projects{
     display: flex;
     flex-direction: column;
+    padding: 0px 10px;
+  }
+  .projects .list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .projects .row{
     display: flex;
     flex-direction: row;
+    gap: 10px;
   }
   .projects .row .el{
     display: flex;
@@ -255,6 +265,7 @@
     padding: 0px 40px 0px 40px;
     background: #F2F2F2;
     border-radius: 50px;
+    width: 50%;
   }
   .projects .row .el p{
     font-family: 'Roboto Flex';
@@ -263,6 +274,63 @@
     font-size: 30px;
     line-height: 35px;
   }
+
+@media screen and (max-width: 600px){
+    p{
+      font-family: 'Roboto Flex';
+      font-style: normal;
+      font-weight: 1000;
+      font-size: 26px;
+      line-height: 30px;
+      color: #1B1B1B;
+      font-stretch: 151;
+      font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 603, 'XOPQ' 85, 'YOPQ' 70, 'YTLC' 514, 'YTUC' 712, 'YTAS' 767, 'YTDE' -173, 'YTFI' 738, 'opsz' 14;
+      text-align: left;
+  }
+
+    .firstscr{
+      padding: 50px 10px 0px 10px;
+    }
+
+    .firstscr img{
+      width: 120px;
+    }
+
+    .pluses .row .el{
+      padding: 15px 30px 0px 30px;
+      height: 165px;
+    }
+    .pluses .row .el p{
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .wehelp{
+      padding: 20px 10px 40px 10px;
+      gap: 20px;
+    }
+    .wehelp .txt{
+      width: 100%;
+    }
+
+    .directions .row .el{
+      padding: 15px 30px 0px 30px;
+      height: 165px;
+    }
+    .directions .row .el p{
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    .projects .row{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+  .projects .row .el{
+    width: 100%;
+  }
+}
 
  
 </style>
