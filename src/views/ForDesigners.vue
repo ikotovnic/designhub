@@ -67,8 +67,8 @@
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 1000;
-    font-size: 70px;
-    line-height: 82px;
+    font-size: 7vw;
+    line-height: 8vw;
     color: #1B1B1B;
     font-stretch: 151;
     font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 603, 'XOPQ' 85, 'YOPQ' 70, 'YTLC' 514, 'YTUC' 712, 'YTAS' 767, 'YTDE' -173, 'YTFI' 738, 'opsz' 14;
@@ -85,6 +85,9 @@
   }
   .firstscr .title{
     max-width: 60%;
+  }
+  .firstscr .img img{
+    width: 25vw;
   }
   .pluses{
     display: flex;

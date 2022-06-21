@@ -45,7 +45,7 @@
         <p class="title">We’re helping Ukranian and Russian developers find projects all over the world</p>
         <p class="text">Our company provides an opportunity for designers to find projects to work with all over the world</p>
       </div>
-      <div>
+      <div class="explore-img">
         <img src="../assets/roundtxt-explore.svg">
       </div>
     </div>
@@ -99,8 +99,8 @@
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 1000;
-    font-size: 70px;
-    line-height: 82px;
+    font-size: 8vw;
+    line-height: 9vw;
     color: #1B1B1B;
     font-stretch: 151;
     font-variation-settings: 'GRAD' 0, 'slnt' 0, 'XTRA' 603, 'XOPQ' 85, 'YOPQ' 70, 'YTLC' 514, 'YTUC' 712, 'YTAS' 767, 'YTDE' -173, 'YTFI' 738, 'opsz' 14;
@@ -110,13 +110,16 @@
   .firstscr{
     display: flex;
     flex-direction: row;
-    padding: 100px 60px 0px 30px;
+    padding: 15px 60px 0px 30px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
   .firstscr .title{
     max-width: 60%;
+  }
+  .firstscr .img img{
+    width: 30vw;
   }
   .pluses{
     display: flex;
@@ -160,9 +163,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 50px 50px 0px;
-    gap: 70px;
+    align-items: end;
+    padding: 120px 50px 30px 0px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -176,12 +179,15 @@
   .wehelp .txt{
     width: 50%;
   }
+  .wehelp img{
+    width: 23vw;
+  }
   .wehelp .txt .title{
     font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 1000;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 4vw;
+    line-height: 5vw;
   }
   .wehelp .txt .text{
     font-family: 'Roboto Flex';
@@ -190,6 +196,9 @@
     font-size: 14px;
     line-height: 16px;
     color: #1B1B1B;
+  }
+  .wehelp .explore-img img{
+    width: 100px;
   }
 
   .directions{

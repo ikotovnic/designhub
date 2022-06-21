@@ -133,7 +133,7 @@ body{
     z-index: 99;
   }
   .mobile-logo img{
-    width: 100px;
+    width: 35vw;
   }
   .header{
     top: unset;
